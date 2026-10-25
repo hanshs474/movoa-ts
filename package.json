@@ -1,0 +1,23 @@
+{
+  "name": "movoa",
+  "version": "0.1.0",
+  "description": "Unlimited AI video generator with sound: on paid plans the tenth take of a shot costs what the first did, and your first clip is free to make right now. Official TypeScript / JavaScript SDK for Movoa (movoa.ai): text to video and photo to video with sound from Node, Deno or Bun.",
+  "type": "module",
+  "main": "./dist/mod.js",
+  "types": "./dist/mod.d.ts",
+  "exports": { ".": { "types": "./dist/mod.d.ts", "default": "./dist/mod.js" } },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "keywords": ["ai", "video-generation", "ai-video-generator", "text-to-video", "image-to-video", "photo-to-video", "ai-video-with-audio", "minimax-h3", "seedance-2-5", "veo-3", "movoa"],
+  "homepage": "https://movoa.ai/?utm_source=npm&utm_medium=package",
+  "repository": { "type": "git", "url": "git+https://github.com/hanshs474/movoa-ts.git" },
+  "bugs": "https://github.com/hanshs474/movoa-ts/issues",
+  "license": "MIT",
+  "author": "Movoa (https://movoa.ai)",
+  "scripts": {
+    "build": "tsc mod.ts --outDir dist --declaration --target es2022 --module es2022 --moduleResolution bundler --lib es2022,dom --skipLibCheck",
+    "test": "npm run build && node --test test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": { "typescript": "^5.6.0" }
+}
